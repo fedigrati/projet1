@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Football Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 🏠 FRONT PAGE -->
+    <div id="home">
+        <h1>⚽ Football Quiz Game</h1>
+        <p>Test your football knowledge!</p>
+
+        <button onclick="goToMenu()">Start Game</button>
+    </div>
+
+    <!-- 🎮 DIFFICULTY MENU -->
+    <div id="start" class="hidden">
+        <h2>Select Difficulty</h2>
+
+        <button onclick="startQuiz('easy')">Easy</button>
+        <button onclick="startQuiz('medium')">Medium</button>
+        <button onclick="startQuiz('hard')">Hard</button>
+    </div>
+
+    <!-- 🧠 QUIZ -->
+    <div id="quiz" class="hidden">
+
+        <img id="playerImg" class="hidden">
+
+        <h2 id="question"></h2>
+
+        <button class="answer" onclick="answer(0)"></button>
+        <button class="answer" onclick="answer(1)"></button>
+        <button class="answer" onclick="answer(2)"></button>
+        <button class="answer" onclick="answer(3)"></button>
+
+        <button id="nextBtn" onclick="next()">Next</button>
+        <button id="homeBtn" class="hidden" onclick="goHome()">Back to Home</button>
+
+        <p id="score"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
